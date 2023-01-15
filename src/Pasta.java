@@ -1,14 +1,16 @@
 public class Pasta {
-    public static int lengthCentimetres;
-    public static String shape;
-    public static String calories;
-    public static String ingredients;
-    public static String texture = "uncooked";
-    public Pasta(int length, String shape,String calories,String ingredients ){
-        this.lengthCentimetres = length;
-        this.shape = shape;
-        this.calories = calories;
-        this.ingredients = ingredients;
+     int lengthCentimetres;
+     String shape;
+     String pastaName;
+     protected String calories;
+     String ingredients;
+     String texture = "uncooked";
+    public Pasta(String name_input, int length_input, String shape_input,String calories_input,String ingredients_input ){
+        this.pastaName = name_input;
+        this.lengthCentimetres = length_input;
+        this.shape = shape_input;
+        this.calories = calories_input;
+        this.ingredients = ingredients_input;
     }
 
     public void prep(){
@@ -16,6 +18,7 @@ public class Pasta {
         System.out.println("mix all the ingredients");
     }
     public void cook(){
+
         this.texture = "cooked";
     }
 }
